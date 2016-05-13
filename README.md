@@ -7,6 +7,17 @@ Description
 Many NGS variant analysis tasks require generation of variants in variant call format (VCF). These files are  large and inconsistently formatted. 
 This package allows one to run basic snpEff annotation on a variant call format  VCF file and then convert this output to a wide table. One can use the output to load into a database system for quick lookup and filtering on different column names.
 
+Input format
+================
+The input VCF files  *must* be compressed and indexed with tabix. To prepare raw VCF files that are not compressed or tabix-indexed, do:
+
+```
+#Make input files tabix compressed
+bgzip file.vcf
+tabix -p vcf file.vcf.gz
+```
+
+
 Requirements
 =====================
 
