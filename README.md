@@ -4,7 +4,8 @@
 Description
 ================
 
-Run basic snpEff annotation on a variant call format  VCF file and then convert this output to a wide table. 
+Many NGS variant analysis tasks require generation of variants in variant call format (VCF). These files are  large and inconsistently formatted. 
+This package allows one to run basic snpEff annotation on a variant call format  VCF file and then convert this output to a wide table. One can use the output to load into a database system for quick lookup and filtering on different column names.
 
 Requirements
 =====================
@@ -33,7 +34,9 @@ install.packages(c("stringr","data.table"))
 Usage
 =========================
 
-Once you have a snpEff database e.g. hg19, run the pipeline as below
+Once you have a snpEff database e.g. hg19,  Set the $SNPEFF variable in the ```vcf_shortAnnotationTable.sh``` script to the snpEff installation on your system. A minimum memory requirement of ~2G RAM is recommended to run this pipeline.
+
+.Run the pipeline as below
 
 ```
 vcf_shortAnnotationTable.sh   snpeff_db input.vcf.gz output
