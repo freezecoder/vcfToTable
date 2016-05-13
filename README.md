@@ -9,8 +9,14 @@ Run basic snpEff annotation on a variant call format  VCF file and then convert 
 Requirements
 --------------------
 
+Bioinformatics tools
+======================
 * snpEff (>= version 4)
 * tabix ( version 0.2.5 or higher).
+* bcftools (Version: 1.3 (using htslib 1.3)  or higher) 
+
+R libraries 
+==================
 * R (> 3.1.2)
 * R data.table i.e. 
 * R stringr
