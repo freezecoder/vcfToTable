@@ -9,11 +9,17 @@ Run basic snpEff annotation on a variant call format  VCF file and then convert 
 Requirements
 --------------------
 
-* snpEff 
+* snpEff (>= version 4)
+* tabix ( version 0.2.5 or higher).
 * R (> 3.1.2)
-* R data.table
+* R data.table i.e. 
 * R stringr
 
+installation of R packages can be done as following
+
+```
+install.packages(c("stringr","data.table"))
+```
 
 Usage
 -------
