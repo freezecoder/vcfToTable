@@ -12,6 +12,7 @@ Requirements
 
 A UNIX/Linux environment is ideal for running this pipeline. I've been running this on Mac OSX and Ubuntu OS. This is a command line program.
 
+Clone/Download this repository and optionally add the folder location to your UNIX ${PATH}.
 
 Bioinformatics tools
 ----------------------
@@ -34,6 +35,8 @@ install.packages(c("stringr","data.table"))
 Usage
 =========================
 
+With snpEff Annotation
+-------------------------------
 Once you have a snpEff database e.g. hg19,  Set the $SNPEFF variable in the ```vcf_shortAnnotationTable.sh``` script to the snpEff installation on your system. A minimum memory requirement of ~2G RAM is recommended to run this pipeline.
 
 .Run the pipeline as below
@@ -42,5 +45,21 @@ Once you have a snpEff database e.g. hg19,  Set the $SNPEFF variable in the ```v
 vcf_shortAnnotationTable.sh   snpeff_db input.vcf.gz output
 
 ```
+
+Without Annotation
+---------------------------
+
+If you're simply trying to convert an annotated VCF file without wanting to run snpEff then you may do the following
+
+```
+VCF_printAllTags.sh inputvariants.vcf.gz > output.tsv
+```
+Each INFO field in the VCF will be printed.
+
+
+
+
+
+
 
 
