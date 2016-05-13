@@ -4,10 +4,12 @@
 Description
 ================
 
-Run basic snpEff annotation on a variant call format  VCF file and then convert this output to a wide table
+Run basic snpEff annotation on a variant call format  VCF file and then convert this output to a wide table. 
 
 Requirements
 =====================
+
+A UNIX/Linux environment is ideal for running this pipeline. I've been running this on Mac OSX and Ubuntu OS. This is a command line program.
 
 
 Bioinformatics tools
