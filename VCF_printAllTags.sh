@@ -18,7 +18,7 @@ if [ ! -e "$file.tbi" ];then
 	tabix -f -p vcf $file
 fi
 
-zcat $file  |grep "^##INFO="  | perl -pe 's/,.+//;s/##INFO=\<ID=//' |sort -u | tr "\n" ","  > $tmp
+gunzip -c $file  |grep "^##INFO="  | perl -pe 's/,.+//;s/##INFO=\<ID=//' |sort -u | tr "\n" ","  > $tmp
 
 perl -e  '$tags=shift;$file=shift;
 open(IN,$tags) or die "$!";

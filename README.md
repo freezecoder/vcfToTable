@@ -67,6 +67,17 @@ VCF_printAllTags.sh inputvariants.vcf.gz > output.tsv
 ```
 Each INFO field in the VCF will be printed.
 
+To parse out these fields in a very quick and dirty way, one can do
+
+
+With VcfAnno annotation
+-----------------------------
+
+The VCFAnno package is a great toolset to use
+
+```
+bash  vcfToTable/VCF_printAllTags.sh  inputvariants.anno.vcf.gz  |perl -w vcfToTable/effParser.pl > output.txt 2> warnings.txt
+```
 
 
 
